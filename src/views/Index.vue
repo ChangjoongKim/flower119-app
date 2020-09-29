@@ -10,17 +10,18 @@
 </template>
 
 <script>
-
+  import {Component, Vue} from 'vue-poperty-decorator';
   import navtab from '@/components/common/navtab';
 
-  export default {
-    name: 'Home',
+  @Component({
     components: {
       navtab
     }
+  })
+
+  export default class Index extends Vue {
+
   }
-
-
 
 </script>
 

@@ -1,32 +1,91 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+
+    <v-main>
+      <router-view/>
+    </v-main>
+    <navtab v-if="!isChecked"></navtab>
+  </v-app>
 </template>
 
+<script>
+
+import navtab from './components/common/navtab';
+
+
+
+export default {
+  name: 'App',
+
+  components: {
+    navtab
+    
+  },
+
+  data: () => ({
+    //
+  }),
+  methods: {
+
+    //
+    
+  },
+
+     created(){ 
+
+       
+       if(document.location.pathname == '/item/Detail'){ this.isChecked = true; } 
+    }
+};
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+div, p, table, tr, td {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  line-height: 1.8em;
 }
-
-#nav {
-  padding: 30px;
+.clear {
+  clear:both;
 }
-
-#nav a {
+.text-size-bigest {
+  font-size: 1.8em;
+}
+.text-size-big{
+  font-size: 1.2em;
+}
+.text-size-medium{
+  font-size: 1.0em;
+}
+.text-size-small{
+  font-size: 8pt;
+}
+.text-size-smallest{
+  font-size: 6pt;
+}
+.text-emphasize {
+  font-weight:bold;
+}
+.text-price {
   font-weight: bold;
-  color: #2c3e50;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.text-discount {
+  color: #B70000;
+  font-weight: bold;
+}
+.text-line-through {
+  text-decoration: line-through;
+}
+.black {
+  color: black;
+}
+.gray {
+  color: #777777;
+}
+.purple {
+  color:  #4C1FBF;
+}
+.red {
+  color: #B70000;
 }
 </style>
