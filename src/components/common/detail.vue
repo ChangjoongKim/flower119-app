@@ -41,16 +41,10 @@
       </v-tabs>
     </div>         
 
-    <v-bottom-navigation
-      absolute
-      color="white"
-      hide-on-scroll
-      horizontal
-      scroll-target="#scroll-threshold-example"
-      scroll-threshold="500"
+    <div class="cart-btn"
     >
       <router-link to="/cart">구매하기</router-link>
-    </v-bottom-navigation>
+    </div>
   </div>
 </template>
 
@@ -103,6 +97,15 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+.cart-btn {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  height: 100px;
+  background-color: white;
+  z-index: 9999999;
+  text-align: center;
 }
 
 </style>
