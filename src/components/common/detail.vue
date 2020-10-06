@@ -16,25 +16,25 @@
       transition="fade-transition"
       ></v-carousel-item>
     </v-carousel>    
-    <div class="dtl-tab-sticky" style="position: sticky; position:-webkit-sticky; top:0;">
-      <v-tabs class="dtl-tab-sticky" background-color="white" color="#4C1FBF" right grow >
+    <div class="margin-top-3">
+      <v-tabs background-color="white" color="#4C1FBF" right grow >
         <v-tab>상품설명</v-tab>
-        <v-tab>실시간구매평</v-tab>
-        <v-tab>사용후기</v-tab>
-        <v-tab>실제배송사진</v-tab>        
+        <v-tab>배송사진<span class="text-size-smallest">(2000)</span></v-tab>
+        <v-tab>사용후기<span class="text-size-smallest">(2000)</span></v-tab>
+        <v-tab>구매평<span class="text-size-smallest">(2000)</span></v-tab>        
         <v-tab-item v-for="n in 4" :key="n">
           <v-container fluid>
             <v-card-text v-if="n==1">
               <detailinfo/>
             </v-card-text>
             <v-card-text v-if="n==2">
-              <DetailOpinion/>
+              <DetailDica/>
             </v-card-text>
             <v-card-text v-if="n==3">
               <DetailUseAfter/>
             </v-card-text>
             <v-card-text v-if="n==4">
-              <DetailDica/>
+              <DetailOpinion/>
             </v-card-text>            
           </v-container>
         </v-tab-item>
@@ -43,7 +43,24 @@
 
     <div class="cart-btn"
     >
-      <router-link to="/cart">구매하기</router-link>
+      <div class="cart-vbtn">
+        <table width="100%" align="center" border="0">
+          <tr>
+            <td width="50%" height="50" align="center" class="text-price" color="#000000">
+               <span class="text-size-big">60,000</span><span class="text-size-small">원</span> 
+            </td>
+            <td width="50%" height="50" align="center">
+              <router-link to="/cart">
+                <v-btn
+                class="mx-2 white--text"
+                color="#4C1FBF"
+                @click="cartNum++"
+                >장바구니에 담기</v-btn>
+              </router-link>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </template>
@@ -80,10 +97,19 @@
         ],
 
     }),
+    mounted () {
+      /* 자바스크립트 */
+
+      /* 자바스크립트 */
+    },
   }
 </script>
 
 <style scoped>
+.cart-vbtn {
+  margin: 0 auto;
+  line-height: 2.0em;
+}
 .detail {
  margin: 0 auto;
 }
@@ -102,10 +128,12 @@
   width: 100%;
   position: fixed;
   bottom: 0px;
-  height: 100px;
-  background-color: white;
+  height: 70px;
+  padding-top: 1%;
+  background-color: #efefef;
   z-index: 9999999;
   text-align: center;
 }
+
 
 </style>

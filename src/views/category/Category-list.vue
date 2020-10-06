@@ -154,10 +154,17 @@
           @click.stop="drawer = !drawer">mdi-arrow-left</v-icon>
       </v-btn>
       <v-spacer></v-spacer>
-      <v-toolbar-title>상품이름</v-toolbar-title>
+      <v-toolbar-title>강력추천 개업선물 - 싱그러운 금전수C </v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <v-icon>mdi-cart</v-icon>
+      <v-badge
+      :content="cartNum"
+      :value="cartNum"
+      color="#4C1FBF"
+      overlap>
+        <v-icon>mdi-cart</v-icon>
+      </v-badge>
+      
     </v-app-bar>
 
 
@@ -191,6 +198,8 @@
       clicked: false,
       isactive: false,
       rating: 4.5,
+      cartNum: 0,
+      show: false,
     }),
   
     watch: {

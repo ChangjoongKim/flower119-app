@@ -45,11 +45,15 @@ div, p, table, tr, td {
   border: 0;
   line-height: 1.8em;
 }
+a {
+  text-decoration: none;
+}
 .clear {
   clear:both;
 }
 .text-size-bigest {
   font-size: 1.8em;
+  line-height: 1.2em;
 }
 .text-size-big{
   font-size: 1.2em;
@@ -62,12 +66,16 @@ div, p, table, tr, td {
 }
 .text-size-smallest{
   font-size: 6pt;
+  letter-spacing: 0em;
 }
 .text-emphasize {
   font-weight:bold;
 }
 .text-price {
   font-weight: bold;
+}
+.text-price a {
+  color: #000000;
 }
 .text-discount {
   color: #B70000;
@@ -87,5 +95,24 @@ div, p, table, tr, td {
 }
 .red {
   color: #B70000;
+}
+.align-center {
+  margin: 0 auto;
+  text-align: center;
+}
+.margin-top-15 {
+  margin-top : 15%;
+}
+.margin-top-10 {
+  margin-top : 10%;
+}
+.margin-top-5 {
+  margin-top : 5%;
+}
+.margin-top-3 {
+  margin-top : 3%;
+}
+.margin-top-2 {
+  margin-top : 2%;
 }
 </style>
