@@ -115,4 +115,8 @@ a {
 .margin-top-2 {
   margin-top : 2%;
 }
+.paging {
+  margin-top: 15%;
+  margin-bottom: 20%;
+}
 </style>

@@ -39,8 +39,9 @@
           </v-container>
         </v-tab-item>
       </v-tabs>
-    </div>         
-
+    <div height="20%"></div>       
+    </div>
+        
     <div class="cart-btn"
     >
       <div class="cart-vbtn">
