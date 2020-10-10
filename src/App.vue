@@ -1,40 +1,30 @@
 <template>
   <v-app>
-
     <v-main>
       <router-view/>
     </v-main>
     <navtab v-if="!isChecked"></navtab>
   </v-app>
 </template>
-
 <script>
-
 import navtab from './components/common/navtab';
-
-
-
 export default {
   name: 'App',
 
   components: {
     navtab
-    
+  
   },
 
   data: () => ({
     //
   }),
   methods: {
-
     //
-    
+  
   },
-
-     created(){ 
-
-       
-       if(document.location.pathname == '/item/Detail'){ this.isChecked = true; } 
+  created(){ 
+    if(document.location.pathname == '/item/Detail'){ this.isChecked = true; } 
     }
 };
 </script>
@@ -54,6 +44,11 @@ a {
 .text-size-bigest {
   font-size: 1.8em;
   line-height: 1.2em;
+}
+.text-size-bigbigest {
+  font-size: 5.0em;
+  line-height: 1.2em;
+  font-weight: bold;
 }
 .text-size-big{
   font-size: 1.2em;
