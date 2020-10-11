@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/index/Home.vue'
+import category from '../views/category/Category-list.vue'
+import detail from '../views/item/Detail.vue'
+import chain from '../views/chain/Srch_chain_list.vue'
+import mypage from '../views/mypage/Mypage.vue'
+import cart from '../views/cart/Cart.vue'
 
 Vue.use(VueRouter)
 
@@ -15,27 +20,27 @@ const routes = [
   {
     path: '/category/',
     name: 'category',
-    component: () => import(/* webpackChunkName: "about" */ '../views/category/Category-list.vue')
+    component: category
    },
   {
     path: '/item/',
     name: 'detail',
-    component: () => import(/* webpackChunkName: "about" */ '../views/item/Detail.vue')
+    component: detail
   },
   {
     path: '/chain/',
     name: 'chain',
-    component: () => import(/* webpackChunkName: "about" */ '../views/chain/Srch_chain_list.vue')
+    component: chain
   },   
   {
     path: '/mypage/',
     name: 'mypage',
-    component: () => import(/* webpackChunkName: "about" */ '../views/mypage/Mypage.vue')
+    component: mypage
   },
   {
     path: '/cart/',
     name: 'cart',
-    component: () => import(/* webpackChunkName: "about" */ '../views/cart/Cart.vue')
+    component: cart
   }, 
 ]
 

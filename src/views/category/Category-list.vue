@@ -180,7 +180,7 @@
   import dicacard from '@/components/common/dicacard';
   import detail from '@/components/common/detail';     
    export default {
-    name: 'home',
+    name: 'category',
     components: {
       locationpicker,
       toolbar,
