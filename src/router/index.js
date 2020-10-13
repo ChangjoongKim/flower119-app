@@ -33,7 +33,7 @@ const routes = [
     component: chain
   },   
   {
-    path: '/mypage/',
+    path: '/mypage',
     name: 'mypage',
     component: mypage
   },
