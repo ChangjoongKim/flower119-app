@@ -29,6 +29,7 @@ export default {
 };
 </script>
 <style>
+/* 기본 설정 */
 div, p, table, tr, td {
   padding: 0;
   margin: 0;
@@ -41,7 +42,49 @@ a {
 .clear {
   clear:both;
 }
-.text-size-bigest {
+/* 문단 타입 */
+.describePtype {
+  width: 90%;
+  margin: 0 auto;
+}
+.describePtype2 {
+  width: 90%;
+  margin: 0 auto;
+}
+.subDescribePtype {
+  width: 90%;
+  margin: 0 auto;
+}
+.listPtype {
+  width: 50%;
+  float: left;
+}
+.analysisPtype {
+  width: 50%;
+  float: left;
+}
+.width-90 {
+  width: 90%;
+  margin: 0 auto;
+}
+.width-80 {
+  width: 80%;
+  margin: 0 auto;
+}
+.border-bottom-line {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5%;
+}
+.border-top-line {
+  border-top: 1px solid #ddd;
+  padding-top: 5%;
+}
+.background-gray {
+  background-color: #f5f5f7;
+}
+
+/* 폰트 */
+.text-size-biggest {
   font-size: 1.8em;
   line-height: 1.2em;
 }
@@ -51,10 +94,10 @@ a {
   font-weight: bold;
 }
 .text-size-big{
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 .text-size-medium{
-  font-size: 1.0em;
+  font-size: 1.1em;
 }
 .text-size-small{
   font-size: 8pt;
@@ -86,15 +129,17 @@ a {
   color: #777777;
 }
 .purple {
-  color:  #4C1FBF;
+  color:  purple;
 }
 .red {
   color: #B70000;
 }
+/* 정렬 */
 .align-center {
   margin: 0 auto;
   text-align: center;
 }
+/* 마진 */
 .margin-top-15 {
   margin-top : 15%;
 }
@@ -109,6 +154,9 @@ a {
 }
 .margin-top-2 {
   margin-top : 2%;
+}
+.margin-bottom-20 {
+  margin-bottom: 20%;
 }
 .paging {
   margin-top: 15%;
