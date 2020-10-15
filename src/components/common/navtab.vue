@@ -1,9 +1,9 @@
 <template>
       <div id="nav" class="navigation">
          <router-link tag="li" to="/">
-           <i class="fa fa-fw fa-home"></i>
+           <i class="fa fa-fw fa-heart"></i>
            <br>
-           <span class="text-size-small">홈</span>
+           <span class="text-size-small">꽃사랑</span>
          </router-link>
          <router-link tag="li" to="/category">
            <i class="fa fa-fw fa-truck"></i>
@@ -16,7 +16,7 @@
            <span class="text-size-small">근처꽃집</span>
          </router-link>
          <router-link tag="li" to="/mypage">
-           <i class="fa fa-fw fa-user"></i>
+           <i class="fa fa-fw fa-user-circle-o"></i>
            <br>
            <span class="text-size-small">마이페이지</span>
          </router-link>
@@ -51,6 +51,7 @@
     border-top: 1px solid #dddddd;
     line-height: 1.0em;
     background-color: white;
+    z-index: 99;
   }
   #nav a {
     text-decoration: none;

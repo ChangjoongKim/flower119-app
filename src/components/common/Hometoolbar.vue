@@ -8,7 +8,16 @@
     outlined
     >
       <v-spacer></v-spacer>
-      <v-toolbar-title>1강력추천 개업선물 - 싱그러운 금전수C </v-toolbar-title>
+      <v-toolbar-title>
+        <v-text-field
+        class="mx-4"
+        flat
+        hide-details
+        label="꽃이름, 용도 검색"
+        prepend-inner-icon="mdi-magnify"
+        solo-inverted
+      ></v-text-field>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-badge
       :content="cartNum"
@@ -18,12 +27,16 @@
         <v-icon>mdi-cart</v-icon>
       </v-badge>
   </v-app-bar>
-  </div>
+      
+
+</div>
+
+
 </template>
 
 <script>
   export default {
-    name: 'toolbar',
+    name: 'Hometoolbar',
 
     data: () => ({
         cartNum: 0,

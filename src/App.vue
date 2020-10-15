@@ -63,6 +63,9 @@ a {
   width: 50%;
   float: left;
 }
+.cardPtype {
+  width: 100%;
+}
 .width-90 {
   width: 90%;
   margin: 0 auto;
@@ -82,7 +85,13 @@ a {
 .background-gray {
   background-color: #f5f5f7;
 }
-
+.bottom-height {
+  line-height: 5.5em;
+}
+.fixed {
+  position: fixed;
+  top: 0px;
+}
 /* 폰트 */
 .text-size-biggest {
   font-size: 1.8em;

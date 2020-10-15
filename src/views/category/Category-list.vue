@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div style="border-bottom: 1px solid #ddd;"><toolbar/></div>
+    <div style="border-bottom: 1px solid #ddd;"><Categorytoolbar/></div>
     <br>
     <br>
     <locationpicker/>
@@ -176,14 +176,14 @@
 
 <script>
   import locationpicker from '@/components/common/Locationpicker';
-  import toolbar from '@/components/common/toolbar';
+  import Categorytoolbar from '@/components/common/Categorytoolbar';
   import dicacard from '@/components/common/dicacard';
   import detail from '@/components/common/detail';     
    export default {
     name: 'category',
     components: {
       locationpicker,
-      toolbar,
+      Categorytoolbar,
       dicacard,
       detail,
      },

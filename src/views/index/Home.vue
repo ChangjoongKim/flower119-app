@@ -1,57 +1,139 @@
 <template>
   <div class="home">
+    <div><Hometoolbar /></div>
+      <div style="height:5.5em;"></div>
+      <v-tabs           v-model="tab"
+          align-with-title background-color="white" color="#4C1FBF" left>
 
-    <div class="describePtype">
-      <div class="text-size-big text-emphasize">서브타이틀</div>
-      <div class="text-size-biggest text-emphasize margin-top-2">내용</div>
-    </div>
-    <br>
-    
-    <div class="describePtype2 align-center">
-      <div class="text-size-big text-emphasize">서브타이틀</div>
-      <div class="text-size-biggest text-emphasize">내용</div>
-      <div class="margin-top-2">설명</div>
-      <a href="">링크</a>
-    </div>
-    <br>
-    <div class="subDescribePtype">
-      <div class="text-size-medium text-emphasize">제목</div>
-      <div class="text-size-medium text-emphasize gray">내용</div>
-    </div>
+        <v-tab>인기</v-tab>
+        <v-tab>팔로잉</v-tab>
+        <v-tab>최신</v-tab>
+        <v-tab>꽃집</v-tab>
+       
+        <v-tab-item v-for="n in 4" :key="n">
+          <v-container fluid>
+            <v-card-text v-if="n==1">
 
-    <div class="listPtype">
-      <div class="width-80 align-center">
-        <div class="margin-top-10"><img src="http://img.flower119.co.kr/catg/Ca08667.jpg" width="100%" /></div>
-        <div class="text-emphasize margin-top-15">NEW</div>
-        <div class="text-emphasize margin-top-2">상품명</div>
-        <div class="text-emphasize gray">가격</div>
-        <div class="text-size-small margin-top-5">
-          (후기 350개)
+            <!--게시글 한 개-->
+            <div class="cardPtype border-bottom-line">
+              <div>
+                <div class="margin-top-5"><img src="http://img.flower119.co.kr/catg/Ca08667.jpg" width="100%" /></div>
+                <div class="width-90">
+                  <div class="text-emphasize margin-top-5">코멘트</div>
+                  <div class="text-size-small margin-top-5">
+                      <table width="100%">
+                        <tr>
+                          <td width="15%">
+                            <v-avatar color="#999999">
+                              <v-icon dark>mdi-flower</v-icon>
+                            </v-avatar>
+                          </td>
+                          <td width="55%">
+                            <span class="text-shop-name">플라워119꽃배달서비스</span>
+                            <br>
+                            <v-icon small color="#4C1FBF">mdi-star</v-icon> <span>4.5</span><span class="text-size-small">(499)</span>
+                          </td>
+                          <td width="30%" align="right" class="text-size-small" valign="top">
+                            서울특별시 / 서초구
+                            <br>
+                            2020.09.25
+                          </td>
+                        </tr>
+                      </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--게시글 한 개-->
+                        <!--게시글 한 개-->
+            <div class="cardPtype border-bottom-line">
+              <div>
+                <div class="margin-top-5"><img src="http://img.flower119.co.kr/catg/Ca08667.jpg" width="100%" /></div>
+                <div class="width-90">
+                  <div class="text-emphasize margin-top-5">코멘트</div>
+                  <div class="text-emphasize gray">게시일</div>
+                  <div class="text-size-small margin-top-5">
+                      <table width="100%">
+                        <tr>
+                          <td width="15%">
+                            <v-avatar color="#999999">
+                              <v-icon dark>mdi-flower</v-icon>
+                            </v-avatar>
+                          </td>
+                          <td width="55%">
+                            <span class="text-shop-name">플라워119꽃배달서비스</span>
+                            <br>
+                            <v-icon small color="#4C1FBF">mdi-star</v-icon> <span>4.5</span><span class="text-size-small">(499)</span>
+                          </td>
+                          <td width="30%" align="right" class="text-size-small" valign="top">
+                            서울특별시 / 서초구
+                            <br>
+                            2020.09.25
+                          </td>
+                        </tr>
+                      </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--게시글 한 개-->
+
+            </v-card-text>
+            <v-card-text v-if="n==2">
+    <div class="cardPtype border-bottom-line">
+      <div>
+        <div class="margin-top-5"><img src="http://img.flower119.co.kr/catg/Ca08667.jpg" width="100%" /></div>
+        <div class="width-80">
+          <div class="text-emphasize margin-top-5">상품명</div>
+          <div class="text-emphasize gray">가격</div>
+          <div class="text-size-small margin-top-5">
+            (후기 350개)
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="analysisPtype">
-      <div class="width-80">
-        <div class="margin-top-15 border-top-line gray">Up to</div>
-        <div class="text-size-biggest text-emphasize">20% SALE</div>
-        <div class="text-emphasize gray margin-top-3 margin-bottom-20">공기정화기능 최고</div>
+            </v-card-text>
+            <v-card-text v-if="n==3">
+    <div class="cardPtype border-bottom-line">
+      <div>
+        <div class="margin-top-5"><img src="http://img.flower119.co.kr/catg/Ca08667.jpg" width="100%" /></div>
+        <div class="width-80">
+          <div class="text-emphasize margin-top-5">상품명</div>
+          <div class="text-emphasize gray">가격</div>
+          <div class="text-size-small margin-top-5">
+            (후기 350개)
+          </div>
+        </div>
       </div>
     </div>
+            </v-card-text>            
+            <v-card-text v-if="n==4">
+    <div class="cardPtype border-bottom-line">
+      <div>
+        <div class="margin-top-5"><img src="http://img.flower119.co.kr/catg/Ca08667.jpg" width="100%" /></div>
+        <div class="width-80">
+          <div class="text-emphasize margin-top-5">상품명</div>
+          <div class="text-emphasize gray">가격</div>
+          <div class="text-size-small margin-top-5">
+            (후기 350개)
+          </div>
+        </div>
+      </div>
+    </div>
+            </v-card-text>       
+          </v-container>
+        </v-tab-item>
+    </v-tabs>
+    </div>
 
-
-
-
-
-
-  </div>
 </template>
 
 <script>
+  import Hometoolbar from '@/components/common/Hometoolbar'
   export default {
     name: 'home',
     components: {
- 
+      Hometoolbar,
     },
         data () {
       return {
@@ -63,5 +145,7 @@
 
 </script>
 <style>
-
+  .home {
+    margin-bottom: 15%;
+  }
 </style>
